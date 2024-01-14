@@ -53,7 +53,7 @@ class InitialViewController: UIViewController {
 // MARK: - Network
 extension InitialViewController {
     func checkEligabilityStatus() {
-        viewModel.checkAligability() { (response, status, success) in
+        viewModel.checkAligability() { (_, _, _) in
             Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
                 self.coordinator?.movetoAuthFlow(nil)
                 timer.invalidate()
